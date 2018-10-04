@@ -21,9 +21,9 @@ struct sum input()
    return i;
 }
 
-struct sum compute()
+struct sum compute(struct sum i)
 {
-   struct sum i;
+   
    i.add = 0;
    for(int k = 0; k<i.b;k++)
    {
@@ -32,18 +32,18 @@ struct sum compute()
    return i;
 }
 
-struct sum output()
+struct sum output(struct sum i)
 {
-   struct sum i;
+   
    printf("Sum of given numbers is %d\n",i.add);
 }
 
 int main()
 {
    struct sum i;
-   input();
-   compute();
-   output();
+   i=input();
+   i=compute(i);
+   output(i);
    return 0;
 }
 
